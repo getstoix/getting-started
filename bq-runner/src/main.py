@@ -1,7 +1,7 @@
 import os
 import sys
 from google.cloud import bigquery
-from bq import BQRunner
+from src.bq import BQRunner
 import base64
 import json
 from collections import namedtuple
