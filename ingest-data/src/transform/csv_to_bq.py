@@ -27,9 +27,6 @@ def parse_input(value: Dict[str, Any]) -> Optional[Input]:
     except KeyError:
         return None
 
-    if bronze + silver + gold is not total:
-        return None
-
     return Input(
         bronze=bronze,
         gold=gold,

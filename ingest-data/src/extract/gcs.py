@@ -1,5 +1,5 @@
 from os import read
-from typing import Any, Dict, Iterator, List, Optional
+from typing import Any, Dict, Iterator, Optional
 from google.cloud import storage
 import csv
 

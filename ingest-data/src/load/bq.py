@@ -12,10 +12,10 @@ class BQLoader:
         self.client = client
         self.table = client.get_table(table=table)
 
-    def load(self, row: Iterable[Dict]):
+    def load(self, rows: Iterable[Dict]):
         """Insert rows into a table via the streaming API.
 
         Raises:
             ValueError: if table's schema is not set or `rows` is not a `Sequence`.
         """
-        self.client.insert_rows(table=self.table, rows=[row])
+        self.client.insert_rows(table=self.table, rows=rows)

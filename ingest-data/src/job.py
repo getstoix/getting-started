@@ -1,5 +1,5 @@
 from typing import Any, Callable, Dict, Iterable
-from transform.csv_to_bq import Output, parse_input, transform
+from src.transform.csv_to_bq import Output, parse_input, transform
 
 
 def job(

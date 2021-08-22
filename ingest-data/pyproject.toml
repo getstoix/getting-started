@@ -4,6 +4,9 @@ version = "1.0.0"
 description = "Ingest data from Google cloud storage to BigQuery"
 authors = ["Marc Jamot <marc@getstoix.com>"]
 license = "MIT"
+packages = [
+    { include = "./**/*.py" }
+]
 
 [tool.poetry.dependencies]
 python = ">=3.6.2, <3.10"

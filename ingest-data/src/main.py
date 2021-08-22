@@ -1,10 +1,10 @@
 import os
 import sys
-from extract.gcs import GCSExtractor
+from src.extract.gcs import GCSExtractor
 from google.cloud import storage
 from google.cloud import bigquery
-from job import job
-from load.bq import BQLoader
+from src.job import job
+from src.load.bq import BQLoader
 import base64
 import json
 from collections import namedtuple
