@@ -1,3 +1,5 @@
+"""Transformation of data."""
+
 from collections import namedtuple
 from typing import Any, Dict, Optional
 
@@ -39,12 +41,12 @@ def parse_input(value: Dict[str, Any]) -> Optional[Input]:
     )
 
 
-def transform(input: Input) -> Output:
+def transform(data: Input) -> Output:
     """Transform our CSV data to the format we have in BigQuery."""
     return Output(
-        bronze=input.bronze,
-        country_code=input.noc,
-        country_name=input.team,
-        gold=input.gold,
-        silver=input.silver,
+        bronze=data.bronze,
+        country_code=data.noc,
+        country_name=data.team,
+        gold=data.gold,
+        silver=data.silver,
     )

@@ -1,17 +1,18 @@
+"""Test src/transform/csv_to_bq.py"""
+
 import unittest
 from src.transform.csv_to_bq import parse_input, transform, Input, Output
-from unittest.mock import Mock, patch
-import io
-from google.cloud import bigquery
 
 
 class TestCsvToBQ(unittest.TestCase):
     def test_parse_input_wrong(self):
-        input = parse_input({})
-        self.assertIsNone(input)
+        """Test that failed parse equals None."""
+        data = parse_input({})
+        self.assertIsNone(data)
 
     def test_parse_input_correct(self):
-        input = parse_input(
+        """Test that correct parse returns valid class."""
+        data = parse_input(
             {
                 "bronze": 1,
                 "gold": 2,
@@ -24,7 +25,7 @@ class TestCsvToBQ(unittest.TestCase):
             }
         )
         self.assertEqual(
-            input,
+            data,
             Input(
                 bronze=1,
                 gold=2,
@@ -38,7 +39,8 @@ class TestCsvToBQ(unittest.TestCase):
         )
 
     def test_transform(self):
-        input = Input(
+        """Test that given input produces wanted output."""
+        data = Input(
             bronze=1,
             gold=2,
             noc="4",
@@ -48,7 +50,7 @@ class TestCsvToBQ(unittest.TestCase):
             team="64",
             total=128,
         )
-        output = transform(input)
+        output = transform(data)
         self.assertEqual(
             output,
             Output(

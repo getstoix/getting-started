@@ -1,13 +1,15 @@
-import os
-import sys
-from src.extract.gcs import GCSExtractor
-from google.cloud import storage
-from google.cloud import bigquery
-from src.job import job
-from src.load.bq import BQLoader
+"""Main entry for ingest-data."""
+
 import base64
 import json
+import os
+import sys
 from collections import namedtuple
+from google.cloud import storage
+from google.cloud import bigquery
+from src.extract.gcs import GCSExtractor
+from src.job import job
+from src.load.bq import BQLoader
 
 Config = namedtuple(
     "Config",

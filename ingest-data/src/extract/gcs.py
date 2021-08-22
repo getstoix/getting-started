@@ -1,10 +1,11 @@
-from os import read
+"""Extracting data from Google Cloud Storage."""
+
+import csv
 from typing import Any, Dict, Iterator, Optional
 from google.cloud import storage
-import csv
 
 
-class GCSExtractor:
+class GCSExtractor:  # pylint: disable=too-few-public-methods
     """Extraction of data from Google Cloud Storage."""
 
     bucket_name: str
@@ -27,7 +28,7 @@ class GCSExtractor:
         bucket = self.client.bucket(bucket_name=self.bucket_name)
         blobs = self.client.list_blobs(bucket, prefix=self.prefix)
         for blob in blobs:
-            with blob.open("rt") as f:
-                reader = csv.DictReader(f)
+            with blob.open("rt") as blob_file:
+                reader = csv.DictReader(blob_file)
                 for row in reader:
                     yield row

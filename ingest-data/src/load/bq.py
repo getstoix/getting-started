@@ -1,8 +1,10 @@
+"""Loading data into BigQuery."""
+
 from typing import Dict, Iterable
 from google.cloud import bigquery
 
 
-class BQLoader:
+class BQLoader:  # pylint: disable=too-few-public-methods
     """Insertion of data in BigQuery."""
 
     client: bigquery.Client
