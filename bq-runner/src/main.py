@@ -1,10 +1,12 @@
-import os
-import sys
-from google.cloud import bigquery
-from src.bq import BQRunner
+"""Main entry for bq-runner."""
+
 import base64
 import json
+import os
+import sys
 from collections import namedtuple
+from google.cloud import bigquery
+from src.bq import BQRunner
 
 Config = namedtuple(
     "Config",

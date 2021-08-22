@@ -1,7 +1,9 @@
-import os
-from src.main import get_config, env_require
-from unittest import mock
+"""Test src/main.py"""
+
 import unittest
+import os
+from unittest import mock
+from src.main import get_config, env_require
 
 
 class TestMain(unittest.TestCase):
@@ -14,6 +16,7 @@ class TestMain(unittest.TestCase):
         },
     )
     def test_get_config(self):
+        """Test that get config parses environment variables correctly."""
         config = get_config()
         self.assertEqual(config.credentials, {"name": "test"})
         self.assertEqual(config.project, "myproject")
@@ -21,6 +24,7 @@ class TestMain(unittest.TestCase):
 
     @mock.patch.dict(os.environ, {"TEST": "ENABLED"})
     def test_env_require(self):
+        """Test that env require handles both missing and existing environment variables."""
         try:
             env_require("DOES_NOT_EXIST")
         except SystemExit:

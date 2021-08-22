@@ -1,7 +1,9 @@
+"""Interact with BigQuery."""
+
 from google.cloud import bigquery
 
 
-class BQRunner:
+class BQRunner:  # pylint: disable=too-few-public-methods
     """Runs a query in BigQuery."""
 
     client: bigquery.Client
