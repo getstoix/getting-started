@@ -30,12 +30,6 @@ docker run --rm -it \
   stoix/getting-started/bq-runner:latest
 ```
 
-Running the tests in Docker:
-
-```
-docker build -t 
-```
-
 Running the tests locally, pre-requisite is Poetry (https://python-poetry.org/):
 
 ```
@@ -71,12 +65,6 @@ docker run --rm -it \
   -e GCP_PROJECT=<...> \
   -e BQ_TABLE=<...> \
   stoix/getting-started/ingest-data:latest
-```
-
-Running the tests in Docker:
-
-```
-docker build -t 
 ```
 
 Running the tests locally, pre-requisite is Poetry (https://python-poetry.org/):
