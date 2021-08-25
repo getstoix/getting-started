@@ -13,4 +13,4 @@ def job(
         if data is None:
             continue
         output = transform(data)
-        load(output)
+        load([output])
