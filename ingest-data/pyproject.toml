@@ -2,7 +2,7 @@
 name = "ingest-data"
 version = "1.0.0"
 description = "Ingest data from Google cloud storage to BigQuery"
-authors = ["Marc Jamot <marc@getstoix.com>"]
+authors = ["Marc Jamot <marc@getstoix.com>", "Oscar Silver <oscar@getstoix.com>"]
 license = "MIT"
 packages = [
     { include = "./**/*.py" }
