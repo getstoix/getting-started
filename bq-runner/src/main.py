@@ -6,7 +6,7 @@ import os
 import sys
 from collections import namedtuple
 from google.cloud import bigquery
-from src.bq import BQRunner
+from bq import BQRunner
 
 Config = namedtuple(
     "Config",
