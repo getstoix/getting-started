@@ -8,5 +8,6 @@ WORKDIR /opt/stoix/ingest-data
 COPY pyproject.toml poetry.lock ./
 RUN /home/stoix/.poetry/bin/poetry install --no-dev --no-root
 COPY src src
+RUN /home/stoix/.poetry/bin/poetry install --no-dev
 
 CMD /home/stoix/.poetry/bin/poetry run python src/main.py

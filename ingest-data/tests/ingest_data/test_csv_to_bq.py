@@ -14,50 +14,20 @@ class TestCsvToBQ(unittest.TestCase):
         """Test that correct parse returns valid class."""
         data = parse_input(
             {
-                "bronze": 1,
-                "gold": 2,
-                "noc": "4",
-                "rank": 8,
-                "ranktotal": 16,
-                "silver": 32,
-                "team": "64",
-                "total": 128,
+                "date": "20210816",
+                "type": "coffee",
             }
         )
         self.assertEqual(
             data,
-            Input(
-                bronze=1,
-                gold=2,
-                noc="4",
-                rank=8,
-                ranktotal=16,
-                silver=32,
-                team="64",
-                total=128,
-            ),
+            Input(date="20210816", beverage_type="coffee"),
         )
 
     def test_transform(self):
         """Test that given input produces wanted output."""
-        data = Input(
-            bronze=1,
-            gold=2,
-            noc="4",
-            rank=8,
-            ranktotal=16,
-            silver=32,
-            team="64",
-            total=128,
-        )
+        data = Input(date="20210816", beverage_type="coffee")
         output = transform(data)
         self.assertEqual(
             output,
-            Output(
-                bronze=1,
-                country_code="4",
-                country_name="64",
-                gold=2,
-                silver=32,
-            ),
+            Output(date="2021-08-16", beverage_type="coffee"),
         )
