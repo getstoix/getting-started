@@ -18,7 +18,7 @@ def job(
             continue
         output = transform(data)
         outputs.append(output)
-        if len(outputs) > BATCH_SIZE:
+        if len(outputs) >= BATCH_SIZE:
             load(outputs)
             outputs = []
     if len(outputs) > 0:
