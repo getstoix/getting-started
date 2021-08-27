@@ -6,7 +6,8 @@ RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-
 
 WORKDIR /opt/stoix/bq-runner
 COPY pyproject.toml poetry.lock ./
-RUN /home/stoix/.poetry/bin/poetry install --no-dev
+RUN /home/stoix/.poetry/bin/poetry install --no-dev --no-root
 COPY src src
+RUN /home/stoix/.poetry/bin/poetry install --no-dev
 
 CMD /home/stoix/.poetry/bin/poetry run python src/main.py
