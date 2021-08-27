@@ -4,6 +4,9 @@ version = "1.0.0"
 description = "Run a query in BigQuery"
 authors = ["Marc Jamot <marc@getstoix.com>", "Oscar Silver <oscar@getstoix.com>"]
 license = "MIT"
+packages = [
+    { include = "./**/*.py" }
+]
 
 [tool.poetry.dependencies]
 python = ">=3.6.2, <3.10"

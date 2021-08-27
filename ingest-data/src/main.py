@@ -7,9 +7,9 @@ import sys
 from collections import namedtuple
 from google.cloud import storage
 from google.cloud import bigquery
-from extract.gcs import GCSExtractor
-from job import job
-from load.bq import BQLoader
+from src.extract.gcs import GCSExtractor
+from src.job import job
+from src.load.bq import BQLoader
 
 Config = namedtuple(
     "Config",
