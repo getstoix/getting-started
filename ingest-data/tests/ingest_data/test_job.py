@@ -17,4 +17,4 @@ class TestJob(unittest.TestCase):
         job(extract=extract, load=load)
         parse_input.assert_called_once_with(1)
         transform.assert_called_once_with(2)
-        load.assert_called_once_with(3)
+        load.assert_called_once_with([3])
