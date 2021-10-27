@@ -1,13 +1,7 @@
 FROM python:3
-
-RUN addgroup --system stoix && adduser --system --ingroup stoix stoix
-USER stoix:stoix
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-
 WORKDIR /opt/stoix/bq-runner
-COPY pyproject.toml poetry.lock ./
-RUN /home/stoix/.poetry/bin/poetry install --no-dev --no-root
+COPY requirements.txt requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 COPY src src
-RUN /home/stoix/.poetry/bin/poetry install --no-dev
-
-CMD /home/stoix/.poetry/bin/poetry run python src/main.py
+CMD python src/main.py
