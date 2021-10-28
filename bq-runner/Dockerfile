@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.9
 WORKDIR /opt/stoix/bq-runner
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip
