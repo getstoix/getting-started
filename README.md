@@ -27,7 +27,7 @@ docker run --rm -it \
   -e GCP_SERVICE_ACCOUNT_CREDENTIALS=<...> \
   -e GCP_PROJECT=<...> \
   -e BQ_QUERY=<...> \
-  stoix/getting-started/bq-runner:latest
+  stoix/getting-started-bq-runner:latest
 ```
 
 Running the tests locally:
@@ -66,7 +66,7 @@ docker run --rm -it \
   -e GCP_SERVICE_ACCOUNT_CREDENTIALS=<...> \
   -e GCP_PROJECT=<...> \
   -e BQ_TABLE=<...> \
-  stoix/getting-started/ingest-data:latest
+  stoix/getting-started-ingest-data:latest
 ```
 
 Running the tests locally:
