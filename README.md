@@ -17,7 +17,7 @@ Environment variables:
 Build the container image using Docker:
 
 ```
-docker build -t stoix/getting-started-bq-runner:latest .
+docker build -t stoix/getting-started-bq-runner:latest ./bq-runner
 ```
 
 Running the container image locally, replace values for environment variables:
@@ -54,7 +54,7 @@ Environment variables:
 Build the container image using Docker:
 
 ```
-docker build -t stoix/getting-started-ingest-data:latest .
+docker build -t stoix/getting-started-ingest-data:latest ./ingest-data
 ```
 
 Running the container image locally, replace values for environment variables:
