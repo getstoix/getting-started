@@ -30,11 +30,13 @@ docker run --rm -it \
   stoix/getting-started/bq-runner:latest
 ```
 
-Running the tests locally, pre-requisite is Poetry (https://python-poetry.org/):
+Running the tests locally:
 
 ```
-poetry install
-poetry run tox
+cd bq-runner
+pip install -r requirements.txt
+pip install -r tests/requirements.txt
+python -m pytest
 ```
 
 ## ingest-data
@@ -67,9 +69,11 @@ docker run --rm -it \
   stoix/getting-started/ingest-data:latest
 ```
 
-Running the tests locally, pre-requisite is Poetry (https://python-poetry.org/):
+Running the tests locally:
 
 ```
-poetry install
-poetry run tox
+cd ingest-data
+pip install -r requirements.txt
+pip install -r tests/requirements.txt
+python -m pytest
 ```
