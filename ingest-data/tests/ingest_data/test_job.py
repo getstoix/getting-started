@@ -2,7 +2,7 @@
 
 import unittest
 from unittest.mock import Mock, patch
-from src.job import job
+from job import job
 
 
 class TestJob(unittest.TestCase):

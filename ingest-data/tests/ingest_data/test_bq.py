@@ -3,7 +3,7 @@
 import unittest
 from unittest.mock import Mock
 from google.cloud import bigquery
-from src.load.bq import BQLoader
+from load.bq import BQLoader
 
 
 class TestBQLoader(unittest.TestCase):

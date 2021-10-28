@@ -1,7 +1,7 @@
 """Core components for the job."""
 
 from typing import Any, Callable, Dict, Iterable
-from src.transform.csv_to_bq import Output, parse_input, transform
+from transform.csv_to_bq import Output, parse_input, transform
 
 BATCH_SIZE = 1024
 

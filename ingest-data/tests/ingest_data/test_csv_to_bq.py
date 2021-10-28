@@ -1,7 +1,7 @@
 """Test src/transform/csv_to_bq.py"""
 
 import unittest
-from src.transform.csv_to_bq import parse_input, transform, Input, Output
+from transform.csv_to_bq import parse_input, transform, Input, Output
 
 
 class TestCsvToBQ(unittest.TestCase):

@@ -2,7 +2,7 @@
 
 import unittest
 from unittest.mock import Mock
-from src.bq import BQRunner
+from bq import BQRunner
 
 
 class TestBQRunner(unittest.TestCase):

@@ -3,7 +3,7 @@
 import io
 import unittest
 from unittest.mock import Mock
-from src.extract.gcs import GCSExtractor
+from extract.gcs import GCSExtractor
 
 
 class TestGCSExtractor(unittest.TestCase):

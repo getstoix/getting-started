@@ -3,7 +3,7 @@
 import unittest
 import os
 from unittest import mock
-from src.main import get_config, env_require
+from main import get_config, env_require
 
 
 class TestMain(unittest.TestCase):
